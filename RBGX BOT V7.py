@@ -7,7 +7,6 @@ import threading
 import re
 import time
 import struct
-import struct
 import random
 
 #################################
