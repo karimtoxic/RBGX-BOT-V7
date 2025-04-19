@@ -962,8 +962,12 @@ class Proxy:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((ip, port))
         s.listen()
+    def run(self, ip, port):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.bind((ip, port))
+        s.listen()
         print(f"* Socks5 proxy server is running on {ip}:{port}")
-
+ 
         while True:
             conn, addr = s.accept()
             t = threading.Thread(target=self.handle_client, args=(conn,))
@@ -1042,9 +1046,7 @@ def gen_msgv2(packet  , replay):
 
 
     
-def start_bot():
-    proxy = Proxy()
-    proxy.run("127.0.0.1", 3000)
+def startt():
+    Proxy().run('127.0.0.1', 3000)
 
-if __name__ == "__main__":
-    start_bot()
+startt()
