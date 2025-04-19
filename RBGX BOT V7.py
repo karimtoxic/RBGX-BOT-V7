@@ -1,6 +1,4 @@
 #################################
-#################################
-
 
 import socket
 import select
@@ -10,10 +8,8 @@ import re
 import time
 import struct
 import struct
-import urllib3
 import random
 
-#################################
 #################################
 
 RbGx = False
@@ -27,12 +23,6 @@ invit_spam = False
 #################################
 
 SOCKS_VERSION = 5
-
-#################################
-
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 
 #################################
 
